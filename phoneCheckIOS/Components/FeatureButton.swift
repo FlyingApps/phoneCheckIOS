@@ -39,7 +39,6 @@ struct FeatureButton: View {
             icon: "map.fill",
             title: "title",
             description: "hello",
-            destinationView: AnyView(TestView())
         )
     )
 }
