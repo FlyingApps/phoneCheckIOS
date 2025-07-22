@@ -23,7 +23,7 @@ struct FeatureViewFactory {
         case .singleTouch:
             Text("single touch view")
         case .unknown:
-            Text("Error")
+            Text("Unhandled feature: \(feature.title)")
         }
     }
 }
