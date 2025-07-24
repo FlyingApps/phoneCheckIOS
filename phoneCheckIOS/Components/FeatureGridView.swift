@@ -65,12 +65,6 @@ struct FeatureGridView: View {
             description: "hello",
             type: .singleTouch
         ),
-
-
-
-
-
-        
     ]
     FeatureGridView(features: features)
 }
