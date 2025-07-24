@@ -41,7 +41,7 @@ struct FeatureGridView: View {
             title: "title",
             description: "hello",
             type: .singleTouch
-        ),Feature(
+        ), Feature(
             icon: "map.fill",
             title: "title",
             description: "hello",
