@@ -12,7 +12,8 @@ struct Feature: Identifiable, Hashable {
     let icon: String
     let title: String
     let description: String
-    
+    let type: FeatureType
+
     static func == (lhs: Feature, rhs: Feature) -> Bool {
         lhs.id == rhs.id
     }

@@ -12,10 +12,6 @@ enum FeatureType {
     case unknown
 }
 
-struct Feature {
-    let type: FeatureType
-}
-
 struct FeatureViewFactory {
     @ViewBuilder
     static func view(for feature: Feature) -> some View {
