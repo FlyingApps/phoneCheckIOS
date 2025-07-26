@@ -11,7 +11,6 @@ struct FeatureButton: View {
     let feature: Feature
     
     var body: some View {
-        NavigationLink(value: feature) {
             VStack(alignment: .leading) {
                 Image(systemName: feature.icon)
                     .font(.largeTitle)
@@ -28,8 +27,6 @@ struct FeatureButton: View {
             .frame(width: 160, height: 140, alignment: .leading)
             .background(Color.colorPalette.buttonColor)
             .cornerRadius(20)
-        }
-        
     }
 }
 
@@ -39,6 +36,7 @@ struct FeatureButton: View {
             icon: "map.fill",
             title: "title",
             description: "hello",
+            type: .singleTouch
         )
     )
 }

@@ -8,14 +8,60 @@
 import SwiftUI
 
 struct ContentView: View {
+    let features: [Feature] = [
+        Feature(
+            icon: "hand.point.up.left",
+            title: "single touch",
+            description: "st-description",
+            type: .singleTouch
+        ),
+        Feature(
+            icon: "hand.point.up.left",
+            title: "1",
+            description: "st-description",
+            type: .singleTouch
+        ),
+        Feature(
+            icon: "hand.point.up.left",
+            title: "2",
+            description: "st-description",
+            type: .singleTouch
+        ),
+        Feature(
+            icon: "hand.point.up.left",
+            title: "3",
+            description: "st-description",
+            type: .singleTouch
+        ),
+        Feature(
+            icon: "hand.point.up.left",
+            title: "4",
+            description: "st-description",
+            type: .singleTouch
+        ),
+        Feature(
+            icon: "hand.point.up.left",
+            title: "5",
+            description: "st-description",
+            type: .singleTouch
+        ),
+        Feature(
+            icon: "hand.point.up.left",
+            title: "6",
+            description: "st-description",
+            type: .singleTouch
+        ),
+
+    ]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            FeatureGridView(features: features)
+                .navigationTitle("Select a feature")
+                .navigationDestination(for: Feature.self) { feature in
+                    FeatureViewFactory.view(for: feature)
+                }
+
         }
-        .padding()
     }
 }
 
